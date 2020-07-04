@@ -1,0 +1,140 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.30.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Zachary Swanson, Doane University, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.30.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.14
+Assembler:       Armasm.exe V6.14
+Linker/Locator:  ArmLink.exe V6.14
+Library Manager: ArmAr.exe V6.14
+Hex Converter:   FromElf.exe V6.14
+CPU DLL:         SARMCM3.DLL V5.30.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TCM.DLL V1.42.0.0
+ 
+<h2>Project:</h2>
+C:\Users\zswan\Documents\git-repos\RTOS_GroundUp\KernelInternals\KernelInternals.uvprojx
+Project File Date:  06/20/2020
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.14', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'stm32f4'
+assembling startup_stm32f411xe.s...
+compiling system_stm32f4xx.c...
+main.c(15): warning: no previous extern declaration for non-static variable 'sp_userled' [-Wmissing-variable-declarations]
+uint32_t* sp_userled = &user_stack[40]; // initialize to 40 because we want to start at bottom of stack (higher address)
+          ^
+main.c(15): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t* sp_userled = &user_stack[40]; // initialize to 40 because we want to start at bottom of stack (higher address)
+^
+main.c(16): warning: no previous extern declaration for non-static variable 'sp_pa15' [-Wmissing-variable-declarations]
+uint32_t* sp_pa15 = &pa15_stack[40];
+          ^
+main.c(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t* sp_pa15 = &pa15_stack[40];
+^
+main.c(28): warning: no previous prototype for function 'userled_main' [-Wmissing-prototypes]
+int userled_main(void) {
+    ^
+main.c(28): note: declare 'static' if the function is not intended to be used outside of this translation unit
+int userled_main(void) {
+^
+static 
+main.c(37): warning: no previous prototype for function 'pa15_main' [-Wmissing-prototypes]
+int pa15_main(void) {
+    ^
+main.c(37): note: declare 'static' if the function is not intended to be used outside of this translation unit
+int pa15_main(void) {
+^
+static 
+main.c(71): warning: 'return' will never be executed [-Wunreachable-code-return]
+        return 0;
+               ^
+main.c(83): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
+void SysTick_Handler(void) {
+     ^
+main.c(83): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SysTick_Handler(void) {
+^
+static 
+main.c(87): warning: no previous prototype for function 'getTick' [-Wmissing-prototypes]
+uint32_t getTick(void) {
+         ^
+main.c(87): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint32_t getTick(void) {
+^
+static 
+main.c(116): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+main.c(12): warning: no previous extern declaration for non-static variable 'user_stack' [-Wmissing-variable-declarations]
+uint32_t user_stack[40];
+         ^
+main.c(12): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t user_stack[40];
+^
+main.c(13): warning: no previous extern declaration for non-static variable 'pa15_stack' [-Wmissing-variable-declarations]
+uint32_t pa15_stack[40];
+         ^
+main.c(13): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t pa15_stack[40];
+^
+main.c(18): warning: no previous extern declaration for non-static variable 'tick' [-Wmissing-variable-declarations]
+volatile uint32_t tick;
+                  ^
+main.c(18): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile uint32_t tick;
+         ^
+main.c(19): warning: no previous extern declaration for non-static variable '_tick' [-Wmissing-variable-declarations]
+volatile uint32_t _tick;
+                  ^
+main.c(19): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+volatile uint32_t _tick;
+         ^
+12 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=820 RO-data=456 RW-data=12 ZI-data=1960  
+".\Objects\KernelInternals.axf" - 0 Error(s), 12 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.14.0.pack
+                Keil.STM32F4xx_DFP.2.14.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_stm32f4
+  C:\Users\zswan\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\zswan\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   MDK\Device\Source\ARM\STM32F411xx_OPT.s
+      Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f411xe.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
+      Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
+Build Time Elapsed:  00:00:06
+</pre>
+</body>
+</html>
