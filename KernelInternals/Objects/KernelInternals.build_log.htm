@@ -30,10 +30,10 @@ Rebuild target 'stm32f4'
 assembling startup_stm32f411xe.s...
 compiling system_stm32f4xx.c...
 main.c(15): warning: no previous extern declaration for non-static variable 'sp_userled' [-Wmissing-variable-declarations]
-uint32_t* sp_userled = &user_stack[40];
+uint32_t* sp_userled = &user_stack[40]; // initialize to 40 because we want to start at bottom of stack (higher address)
           ^
 main.c(15): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-uint32_t* sp_userled = &user_stack[40];
+uint32_t* sp_userled = &user_stack[40]; // initialize to 40 because we want to start at bottom of stack (higher address)
 ^
 main.c(16): warning: no previous extern declaration for non-static variable 'sp_pa15' [-Wmissing-variable-declarations]
 uint32_t* sp_pa15 = &pa15_stack[40];
@@ -129,12 +129,12 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.4.0
 
    * Component: Keil::Device:Startup:2.6.3
-      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
       Source file:   MDK\Device\Source\ARM\STM32F411xx_OPT.s
       Source file:   MDK\Device\Source\ARM\STM32F4xx_OTP.s
       Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f411xe.s
+      Include file:  Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h
       Source file:   Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c
-Build Time Elapsed:  00:00:08
+Build Time Elapsed:  00:00:06
 </pre>
 </body>
 </html>
